@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - OneStackAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="container mt-4 d-flex justify-content-between align-items-center">
+    <h2 class="mb-0">Welcome to OneStackAI 🚀</h2>
+    <button class="btn btn-secondary toggle-dark">Toggle Dark Mode</button>
+  </div>
+
+  <div class="container mt-5">
+    {% for tool in tools %}
+    <div class="card dashboard-card mb-4 p-3 shadow-sm" data-id="{{ tool.id }}">
+      <h4>{{ tool.name }}</h4>
+      <p>{{ tool.description }}</p>
+      <p><strong>Pricing:</strong> {{ tool.pricing }}</p>
+
+      <div class="mt-2">
+        <span class="badge-glow">{{ tool.badge or 'AI-Proof 🛡️' }}</span>
+        <p class="agent-status">Verified ✅</p>
+        <p class="trust-score">Trust Score: {{ tool.trust_score or '—' }}</p>
+       
+      </div>
+
+      <div class="mt-3">
+        <span class="favorite-btn" onclick="toggleFavorite(this)">★</span>
+      </div>
+
+      <div class="rating-stars mt-2" onclick="rateTool(event)">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+
+      <a href="{{ tool.link }}" target="_blank" class="btn btn-primary mt-3">Launch</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // Dark mode toggle
+      d
+ocument.querySelector('.toggle-dark').addEventListener('click', () => {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+      });
+
+      // Favorite toggle
+      window.toggleFavorite = function(el) {
+        el.classList.toggle('active');
+        const toolId = el.closest('.dashboard-card').dataset.id;
+        fetch('/favorite', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ tool_id: toolId })
+        });
+      };
+
+      // Rating logic
+      window.rateTool = function(event) {
+        const stars = event.currentTarget.querySelectorAll('span');
+        const value = event.target.dataset.value;
+        const toolId = event.currentTarget.closest('.dashboard-card').dataset.id;
+        stars.forEach(star => {
+          star.classList.toggle('active', star.dataset.value <= value);
+        });
+        fetch('/rate', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ tool_id: toolId, value: parseInt(value) })
+        });
+      };
+    });
+  </script>
+
+</body>
+</html>
