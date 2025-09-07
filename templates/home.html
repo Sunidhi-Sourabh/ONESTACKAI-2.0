@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneStackAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="d-flex justify-content-between align-items-center mb-4 px-3">
+    <a href="{{ url_for('info') }}" class="btn btn-outline-info">ℹ️ Info</a>
+    <a href="{{ url_for('download') }}" class="btn btn-success">⬇️ Download App</a>
+    <button class="btn btn-secondary toggle-dark">Toggle Dark Mode</button>
+  </header>
+
+  <div class="text-center">
+    <h1>Welcome to OneStackAI 🚀</h1>
+    <p>The AI Power Stack— Discover • Launch • Dominate</p>
+  </div>
+
+  <form method="GET" action="{{ url_for('home') }}" class="mb-4 px-3">
+    <input type="text" name="search" placeholder="Search tools..." class="form-control">
+  </form>
+
+  <form method="GET" action="{{ url_for('home') }}" class="mb-4 d-flex gap-3 px-3">
+    <select name="category" class="form-select">
+      <option value="">All Categories</option>
+      {% for category in tools_data.keys() %}
+        <option value="{{ category }}">{{ category }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="pricing" class="form-select">
+      <option value="">All Pricing</option>
+      <option value="Free">Free</option>
+      <option value="Freemium">Freemium</option>
+      <option value="Paid">Paid</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary">Filter</button>
+  </form>
+
+  <div class="container mt-5">
+    {% for category, tools in tools_data.items() %}
+      <h2 class="mb-4">{{ category }}</h2>
+      <div class="row">
+        {% for tool in tools %}
+          <div class="col-md-6 mb-4">
+            <div class="card dashboard-card h-100 shadow-sm" data-id="{{ tool.id }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ tool.name }}</h5>
+                <p class="card-text">{{ tool.description }}</p>
+                <p><strong>Pricing:</strong> {{ tool.pricing }}</p>
+
+                <div class="mb-2">
+                  <span class="badge-glow">{{ tool.badge or 'AI-Proof 🛡️' }}</span>
+                 <p class="agent-status">Verified ✅</p>
+                  <p class="trust-score">Trust Score: {{ tool.trust_score }}</p>
+                  
+                </div>
+
+                <a href="{{ tool.link }}" target="_blank" class="btn btn-primary">Launch</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <hr>
+    {% endfor %}
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.querySelector('.toggle-dark');
+      const html = document.documentElement;
+
+      toggleButton.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+      });
+    });
+  </script>
+</body>
+</html>
