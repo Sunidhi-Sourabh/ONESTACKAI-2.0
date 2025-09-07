@@ -1,0 +1,26 @@
+# Core dependencies for ONESTACKAI App
+Flask==2.3.2
+Werkzeug==2.3.6
+Jinja2==3.1.2
+itsdangerous==2.1.2
+
+# Data and logic
+requests==2.31.0
+python-dotenv==1.0.0
+datetime
+json5
+
+# Visualization (for dashboard cognition)
+chartjs==0.3.1  # If using Chart.js via Python wrapper
+bootstrap-flask==2.0.0  # Optional: for Bootstrap integration
+
+# XION SDK placeholder (to be added post-hackathon)
+# @burnt-labs/abstraxion-react-native
+# xion-sdk-python  ← hypothetical future package
+
+# Testing and logging
+pytest==7.4.0
+loguru==0.7.2
+
+# Optional: for animated dashboard or UI enhancements
+flask-bootstrap==3.3.7.1
