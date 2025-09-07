@@ -52,7 +52,7 @@ def info():
 
 @app.route("/download")
 def download():
-    return "Download link coming soon!"  # Or redirect to GitHub/APK later
+    return render_template("download.html") 
 
 @app.route("/favorites")
 def favorites():
