@@ -1,7 +1,7 @@
 ## ⚡ ONESTACKAI 2.0
 
 A cinematic AI launchpad designed for creators, developers, and neurodivergent minds who crave clarity, speed, and control.  
-Built with 💡 [Sunidhi Sourabh](https://devpost.com/sunidhisourabh) — student founder, full-stack dev, and indie ecosystem architect.
+Built with 💡 [Sunidhi Sourabh](https://devpost.com/sunidhi-sourabh) — student founder, full-stack dev, and indie ecosystem architect.
 
 ---
 
