@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - OneStackAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header class="d-flex justify-content-between align-items-center mb-4 px-3">
+    <a href="{{ url_for('home') }}" class="btn btn-outline-primary">← Back to Home</a>
+    <a href="{{ url_for('download') }}" class="btn btn-success">⬇️ Download App</a>
+    <button class="btn btn-secondary toggle-dark">Toggle Dark Mode</button>
+  </header>
+
+  <div class="container info-container mt-4">
+    <h1>About OneStackAI</h1>
+    <p><strong>Version:</strong> v2.0 </p>
+
+    <h2>🚀 Project Vision</h2>
+    <p>
+      OneStackAI is a curated hub of AI tools designed to empower learners, developers, and creators — all in one place. Whether you're discovering, launching, or dominating with AI, this platform stacks the best of everything you need.
+    </p>
+
+    <h2>👩‍💻 Created By</h2>
+    <p>
+      <strong>Sunidhi Sourabh</strong><br>
+      Founder & Developer of OneStackAI<br>
+      A student-led passion project built with love, ambition, and a dash of code ✨
+    </p>
+
+    <h2>🔒 Privacy Note</h2>
+    <p>
+      OneStackAI respects your privacy. We do not collect personal data without consent, and any login-based features are designed with user security in mind.
+    </p>
+
+    <h2>⚠️ Disclaimer</h2>
+    <p>
+      OneStackAI does not host or own any external AI tools listed on this platform. All trademarks and tool logos belong to their respective owners. This app only acts as a curated discovery interface under fair use.
+    </p>
+
+    <h2>📜 Licensing</h2>
+    <p>
+      This project is released under the <strong>MIT / Apache 2.0 License</strong>. You are free to use, modify, and distribute it with proper attribution. For full terms, refer to the LICENSE file in the repository.
+    </p>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.toggle-dark').addEventListener('click', () => {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+      });
+    });
+  </script>
+
+</body>
+</html>
