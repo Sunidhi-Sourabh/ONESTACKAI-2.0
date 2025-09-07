@@ -31,6 +31,7 @@ ONESTACKAI 2.0 empowers users to **launch, explore, and flow**—with cinematic 
 - Design: Canva
 - Routing: Static tool metadata
 - Deployment: Manual APK signing
+
 **🧠 v1.1 — OSS Expansion**
 - LLMs Integrated: GPT-OSS, Groq API
 - Routing: Dynamic slash commands
@@ -38,6 +39,7 @@ ONESTACKAI 2.0 empowers users to **launch, explore, and flow**—with cinematic 
 - Backend: Flask + Render
 - OAuth2: Discord + Google Suite
 - CI/CD: GitHub Actions + secure redirect flows
+
 **⚡ v2.0 — Cinematic Launchpad**
 - Backend: Python (modular Flask architecture)
 - Verification: XION testnet + zkLTS proof logic
