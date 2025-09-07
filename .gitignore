@@ -1,0 +1,17 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+.env/
+venv/
+env/
+
+# Ignore Replit-specific
+.replit
+*.sqlite
+*.db
+
+*.jks
+local.properties
+gradle.properties
