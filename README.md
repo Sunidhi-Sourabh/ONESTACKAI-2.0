@@ -24,13 +24,30 @@ ONESTACKAI 2.0 empowers users to **launch, explore, and flow**—with cinematic 
 
 ---
 
-## ⚒️ Tech Stack  
-- **Frontend (Prototype):** Kodular (Phase 1 MVP)  
-- **Frontend (Current):** Flutter  
-- **Backend:** Flask (Replit + Render)  
-- **CI/CD:** GitHub Actions + Manual APK signing  
-- **OAuth2:** Discord + Google Suite integration  
-- **Visual Design:** Canva + Custom SVGs
+## ⚒️ Tech Stack
+**🧪 v1.0 — MVP Phase**
+- Frontend: Kodular (mobile-first prototype)
+- Backend: Flask (Replit)
+- Design: Canva
+- Routing: Static tool metadata
+- Deployment: Manual APK signing
+**🧠 v1.1 — OSS Expansion**
+- LLMs Integrated: GPT-OSS, Groq API
+- Routing: Dynamic slash commands
+- Frontend: Flutter (cross-platform UI)
+- Backend: Flask + Render
+- OAuth2: Discord + Google Suite
+- CI/CD: GitHub Actions + secure redirect flows
+**⚡ v2.0 — Cinematic Launchpad**
+- Backend: Python (modular Flask architecture)
+- Verification: XION testnet + zkLTS proof logic
+- Session Control: Login/Register + Logout flow
+- Badge Logic: AI-Proof 🛡️, Fallback ⚠️, Trust Score
+- Theme: Violet-blue gradient with animated background
+- Routing: Modular dashboard, favorites, info, and snapshot logic
+- Security: .env hygiene, fallback triggers, reviewer clarity
+- Design: Custom SVGs + Canva + cinematic logo ⚡
+- Deployment: Render + GitHub + XION + Devpost-ready
 
 ---
 
@@ -62,6 +79,17 @@ Explore the full build on [Devpost →]()
 
 ---
 
+## 📥 Versioned Downloads
+
+| Version | Description | Download |
+|--------|-------------|----------|
+| **v1.0** | Kodular MVP APK | [Download from Google Drive]() |
+| **v1.1** | GPT-OSS + Groq agent runner | [Run from GitHub Repo]() |
+| **v2.0** | XION testnet deployed dashboard | [Launch ONESTACKAI 2.0]() |
+
+Each version reflects a milestone in ONESTACKAI’s evolution—from prototype to cinematic launchpad.
+
+---
 ## 💬 Community  
 Join the conversation via [Discord]() or [Telegram](https://t.me/OneStackAI)  
 Submit feedback, suggest tools, or contribute to the ecosystem.
