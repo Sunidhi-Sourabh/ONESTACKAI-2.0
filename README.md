@@ -85,15 +85,15 @@ Explore the full build on [Devpost →]()
 
 | Version | Description | Download |
 |--------|-------------|----------|
-| **v1.0** | Kodular MVP APK | [Download from Google Drive]() |
-| **v1.1** | GPT-OSS + Groq agent runner | [Run from GitHub Repo]() |
+| **v1.0** | Kodular MVP APK | [Download from Google Drive](https://drive.google.com/file/d/1lrXk5FxLOBeF17U7Ci-d5OQM_rsEdli8/view?usp=drive_link) |
+| **v1.1** | GPT-OSS + Groq agent runner | [Run from GitHub Repo](https://github.com/Sunidhi-Sourabh/OneStackAI/tree/main/OneStackAI_OpenAI_Hackathon) |
 | **v2.0** | XION testnet deployed dashboard | [Launch ONESTACKAI 2.0]() |
 
 Each version reflects a milestone in ONESTACKAI’s evolution—from prototype to cinematic launchpad.
 
 ---
 ## 💬 Community  
-Join the conversation via [Discord]() or [Telegram](https://t.me/OneStackAI)  
+Join the conversation via [Discord](https://discord.gg/qDG8vgrfc2) or [Telegram](https://t.me/OneStackAI)  
 Submit feedback, suggest tools, or contribute to the ecosystem.
 
 ---
