@@ -66,30 +66,30 @@ ONESTACKAI 2.0 empowers users to **launch, explore, and flow**—with cinematic 
 ## 🚀 Setup Instructions
 
 1. Clone the Repository
-'''
+```
 git clone https://github.com/your-username/onestackai-2.0.git
 cd onestackai-2.0
-'''
+```
 
 2. Create and Configure .env File
-To enable walletless verification and trust scoring, create a .env file in the root directory with the following variables:
-'''
+To enable walletless verification and trust scoring, create a .env file in the root directory with the following variables"
+```
 XION_VERIFY_ENDPOINT=https://testnet.xion.global/api/verify
 XION_PROOF_ENDPOINT=https://testnet.xion.global/api/proof
 XION_API_KEY=your_xion_testnet_key_here
 FLASK_ENV=production
 SECRET_KEY=your_founder_secret_key
-'''
+```
 
 3. Install Dependencies
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 4. Run the Application
-'''
+```
 python app.py
-'''
+```
 
 ---
 
