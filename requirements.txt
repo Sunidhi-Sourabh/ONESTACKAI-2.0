@@ -25,4 +25,4 @@ loguru==0.7.2
 # Optional: for animated dashboard or UI enhancements
 flask-bootstrap==3.3.7.1
 
-gunicorn
+gunicorn==20.1.0
